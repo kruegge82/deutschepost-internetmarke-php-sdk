@@ -295,8 +295,8 @@ class ApiVersion200ResponseAmp implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $invalidProperties = [];
 
-        if (!is_null($this->container['version']) && !preg_match("/^v\\d{1,2}.\\d{1,2}[.\\d{1,5}]$/", $this->container['version'])) {
-            $invalidProperties[] = "invalid value for 'version', must be conform to the pattern /^v\\d{1,2}.\\d{1,2}[.\\d{1,5}]$/.";
+        if (!is_null($this->container['version']) && !preg_match("/^v\\d{1,2}.\\d{1,2}.\\d{1,5}$/", $this->container['version'])) {
+            $invalidProperties[] = "invalid value for 'version', must be conform to the pattern /^v\\d{1,2}.\\d{1,2}.\\d{1,5}$/.";
         }
 
         return $invalidProperties;
@@ -364,8 +364,8 @@ class ApiVersion200ResponseAmp implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable version cannot be null');
         }
 
-        if ((!preg_match("/^v\\d{1,2}.\\d{1,2}[.\\d{1,5}]$/", ObjectSerializer::toString($version)))) {
-            throw new \InvalidArgumentException("invalid value for \$version when calling ApiVersion200ResponseAmp., must conform to the pattern /^v\\d{1,2}.\\d{1,2}[.\\d{1,5}]$/.");
+        if ((!preg_match("/^v\\d{1,2}.\\d{1,2}.\\d{1,5}$/", ObjectSerializer::toString($version)))) {
+            throw new \InvalidArgumentException("invalid value for \$version when calling ApiVersion200ResponseAmp., must conform to the pattern /^v\\d{1,2}.\\d{1,2}.\\d{1,5}$/.");
         }
 
         $this->container['version'] = $version;
