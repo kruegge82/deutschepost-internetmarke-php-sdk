@@ -1,4 +1,4 @@
-# OpenAPI\Client\UserResourceApi
+# kruegge82\DPIM\UserResourceApi
 
 All URIs are relative to https://api-eu.dhl.com/post/de/shipping/im/v1, except if the operation defines another base path.
 
@@ -11,7 +11,7 @@ All URIs are relative to https://api-eu.dhl.com/post/de/shipping/im/v1, except i
 ## `authorization()`
 
 ```php
-authorization($grant_type, $username, $password, $client_id, $client_secret, $for_payment): \OpenAPI\Client\Model\Authentication200Response
+authorization($grant_type, $username, $password, $client_id, $client_secret, $for_payment): \kruegge82\DPIM\Model\Authentication200Response
 ```
 
 Get authorization token.
@@ -26,7 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\UserResourceApi(
+$apiInstance = new kruegge82\DPIM\Api\UserResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -59,7 +59,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Authentication200Response**](../Model/Authentication200Response.md)
+[**\kruegge82\DPIM\Model\Authentication200Response**](../Model/Authentication200Response.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ No authorization required
 ## `retrieveUserData()`
 
 ```php
-retrieveUserData(): \OpenAPI\Client\Model\RetrieveUserDataResponse
+retrieveUserData(): \kruegge82\DPIM\Model\RetrieveUserDataResponse
 ```
 
 Authenticate and retrieve authorized user's data for shop.
@@ -92,10 +92,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: BearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = kruegge82\DPIM\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\UserResourceApi(
+$apiInstance = new kruegge82\DPIM\Api\UserResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -116,7 +116,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RetrieveUserDataResponse**](../Model/RetrieveUserDataResponse.md)
+[**\kruegge82\DPIM\Model\RetrieveUserDataResponse**](../Model/RetrieveUserDataResponse.md)
 
 ### Authorization
 

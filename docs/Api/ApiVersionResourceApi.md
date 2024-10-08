@@ -1,4 +1,4 @@
-# OpenAPI\Client\ApiVersionResourceApi
+# kruegge82\DPIM\ApiVersionResourceApi
 
 All URIs are relative to https://api-eu.dhl.com/post/de/shipping/im/v1, except if the operation defines another base path.
 
@@ -10,7 +10,7 @@ All URIs are relative to https://api-eu.dhl.com/post/de/shipping/im/v1, except i
 ## `apiVersion()`
 
 ```php
-apiVersion(): \OpenAPI\Client\Model\ApiVersion200Response
+apiVersion(): \kruegge82\DPIM\Model\ApiVersion200Response
 ```
 
 Get information about this REST Api version.
@@ -25,7 +25,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
-$apiInstance = new OpenAPI\Client\Api\ApiVersionResourceApi(
+$apiInstance = new kruegge82\DPIM\Api\ApiVersionResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -45,7 +45,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ApiVersion200Response**](../Model/ApiVersion200Response.md)
+[**\kruegge82\DPIM\Model\ApiVersion200Response**](../Model/ApiVersion200Response.md)
 
 ### Authorization
 

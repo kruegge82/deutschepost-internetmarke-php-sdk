@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **retoure_price** | **int** | The total value of confirmed refunds. | [optional]
 **creation_date** | **string** | The timestamp when the refund was created. |
 **serialnumber** | **string** | The serial number of the Safebox (FrankierAccountId). |
-**refunded_vouchers** | [**\OpenAPI\Client\Model\Voucher[]**](Voucher.md) | The list of created franking IDs. |
-**not_refunded_vouchers** | [**\OpenAPI\Client\Model\Voucher[]**](Voucher.md) | The list of created franking IDs. |
+**refunded_vouchers** | [**\kruegge82\DPIM\Model\Voucher[]**](Voucher.md) | The list of created franking IDs. |
+**not_refunded_vouchers** | [**\kruegge82\DPIM\Model\Voucher[]**](Voucher.md) | The list of created franking IDs. |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

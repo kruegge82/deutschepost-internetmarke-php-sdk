@@ -10,6 +10,6 @@ Name | Type | Description | Notes
 **name** | **string** | The name of the print format, e.g. DIN A4 plain paper or letter C5 162 x 229. |
 **description** | **string** | The description of the print format. | [optional]
 **page_type** | **string** | The specification of the print medium.) |
-**page_layout** | [**\OpenAPI\Client\Model\PageLayout**](PageLayout.md) |  |
+**page_layout** | [**\kruegge82\DPIM\Model\PageLayout**](PageLayout.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

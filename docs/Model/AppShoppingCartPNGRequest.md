@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **create_shipping_list** | **string** | Enum that determines whether a mailing list should be created and if so, whether with or without addresses. | [optional]
 **dpi** | **string** |  | [optional]
 **optimize_png** | **bool** | The flag to optimize the PNG (avoid redundant area height). | [optional]
-**positions** | [**\OpenAPI\Client\Model\AppShoppingCartPosition[]**](AppShoppingCartPosition.md) | List of PNG order items. At least one item has to be specified. |
+**positions** | [**\kruegge82\DPIM\Model\AppShoppingCartPosition[]**](AppShoppingCartPosition.md) | List of PNG order items. At least one item has to be specified. |
 **type** | **string** |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

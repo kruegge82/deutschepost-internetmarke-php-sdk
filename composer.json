@@ -1,6 +1,6 @@
 {
     "name": "kruegge82/deutschepost-internetmarke-php-sdk",
-    "description": "Division: Post & Parcel Germany - The INTERNETMARKE is the online-postage for mail products of Deutsche Post AG.",
+    "description": "Division: Post & Parcel Germany<br /> The INTERNETMARKE is the online-postage for mail products of Deutsche Post AG.",
     "keywords": [
         "php",
         "sdk",
@@ -27,9 +27,9 @@
         "friendsofphp/php-cs-fixer": "^3.5"
     },
     "autoload": {
-        "psr-4": { "OpenAPI\\Client\\" : "lib/" }
+        "psr-4": { "kruegge82\\DPIM\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "OpenAPI\\Client\\Test\\" : "test/" }
+        "psr-4": { "kruegge82\\DPIM\\Test\\" : "test/" }
     }
 }

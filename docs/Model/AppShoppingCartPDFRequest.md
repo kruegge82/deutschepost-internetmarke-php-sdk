@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **create_shipping_list** | **string** | Identifier of which type of shipping list is to be created is to be created: 0: No shipping list 1: Shipping list without addresses / delivery receipt only 2: Shipping list with addresses | [optional]
 **dpi** | **string** |  | [optional]
 **page_format_id** | **int** | The ID of the print format. All available formats can be identified by request /app/catalog?types&#x3D;PAGE_FORMATS | [optional]
-**positions** | [**\OpenAPI\Client\Model\AppShoppingCartPDFPosition[]**](AppShoppingCartPDFPosition.md) | List of PDF order items. At least one item has to be specified. |
+**positions** | [**\kruegge82\DPIM\Model\AppShoppingCartPDFPosition[]**](AppShoppingCartPDFPosition.md) | List of PDF order items. At least one item has to be specified. |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

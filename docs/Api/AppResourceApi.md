@@ -1,4 +1,4 @@
-# OpenAPI\Client\AppResourceApi
+# kruegge82\DPIM\AppResourceApi
 
 All URIs are relative to https://api-eu.dhl.com/post/de/shipping/im/v1, except if the operation defines another base path.
 
@@ -17,7 +17,7 @@ All URIs are relative to https://api-eu.dhl.com/post/de/shipping/im/v1, except i
 ## `chargeWallet()`
 
 ```php
-chargeWallet($amount): \OpenAPI\Client\Model\ChargeWalletResponse
+chargeWallet($amount): \kruegge82\DPIM\Model\ChargeWalletResponse
 ```
 
 Charge users wallet
@@ -30,10 +30,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: BearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = kruegge82\DPIM\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AppResourceApi(
+$apiInstance = new kruegge82\DPIM\Api\AppResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -57,7 +57,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\ChargeWalletResponse**](../Model/ChargeWalletResponse.md)
+[**\kruegge82\DPIM\Model\ChargeWalletResponse**](../Model/ChargeWalletResponse.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ try {
 ## `checkoutShoppingCartPDFApp()`
 
 ```php
-checkoutShoppingCartPDFApp($checkout_shopping_cart_pdf_app_request, $validate, $finalize): \OpenAPI\Client\Model\CheckoutShoppingCartAppResponse
+checkoutShoppingCartPDFApp($checkout_shopping_cart_pdf_app_request, $validate, $finalize): \kruegge82\DPIM\Model\CheckoutShoppingCartAppResponse
 ```
 
 Checkouts ot the PDF shopping cart.
@@ -88,16 +88,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: BearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = kruegge82\DPIM\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AppResourceApi(
+$apiInstance = new kruegge82\DPIM\Api\AppResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$checkout_shopping_cart_pdf_app_request = new \OpenAPI\Client\Model\CheckoutShoppingCartPDFAppRequest(); // \OpenAPI\Client\Model\CheckoutShoppingCartPDFAppRequest
+$checkout_shopping_cart_pdf_app_request = new \kruegge82\DPIM\Model\CheckoutShoppingCartPDFAppRequest(); // \kruegge82\DPIM\Model\CheckoutShoppingCartPDFAppRequest
 $validate = false; // bool | This request parameter enables the validate (preview) case.<br/>The response will contain the link to a preview image of an internet stamp in PDF format. A product code, a layout format and optionally a motif are transferred to the service. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code, print format, or theme ID is invalid, the response to the caller will contain appropriate information.   <br/><br/> For the validate (preview) case the 'Authorization' header is not required and the request body has to be of the specified type (See `#/components/schemas/AppShoppingCartPreviewPDFRequest`).
 $finalize = false; // bool | This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required.
 
@@ -113,13 +113,13 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **checkout_shopping_cart_pdf_app_request** | [**\OpenAPI\Client\Model\CheckoutShoppingCartPDFAppRequest**](../Model/CheckoutShoppingCartPDFAppRequest.md)|  | |
+| **checkout_shopping_cart_pdf_app_request** | [**\kruegge82\DPIM\Model\CheckoutShoppingCartPDFAppRequest**](../Model/CheckoutShoppingCartPDFAppRequest.md)|  | |
 | **validate** | **bool**| This request parameter enables the validate (preview) case.&lt;br/&gt;The response will contain the link to a preview image of an internet stamp in PDF format. A product code, a layout format and optionally a motif are transferred to the service. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code, print format, or theme ID is invalid, the response to the caller will contain appropriate information.   &lt;br/&gt;&lt;br/&gt; For the validate (preview) case the &#39;Authorization&#39; header is not required and the request body has to be of the specified type (See &#x60;#/components/schemas/AppShoppingCartPreviewPDFRequest&#x60;). | [optional] [default to false] |
 | **finalize** | **bool**| This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. | [optional] [default to false] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CheckoutShoppingCartAppResponse**](../Model/CheckoutShoppingCartAppResponse.md)
+[**\kruegge82\DPIM\Model\CheckoutShoppingCartAppResponse**](../Model/CheckoutShoppingCartAppResponse.md)
 
 ### Authorization
 
@@ -137,7 +137,7 @@ try {
 ## `checkoutShoppingCartPNGApp()`
 
 ```php
-checkoutShoppingCartPNGApp($checkout_shopping_cart_png_app_request, $validate, $finalize): \OpenAPI\Client\Model\CheckoutShoppingCartAppResponse
+checkoutShoppingCartPNGApp($checkout_shopping_cart_png_app_request, $validate, $finalize): \kruegge82\DPIM\Model\CheckoutShoppingCartAppResponse
 ```
 
 Checkouts ot the PNG shopping cart.
@@ -150,16 +150,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: BearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = kruegge82\DPIM\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AppResourceApi(
+$apiInstance = new kruegge82\DPIM\Api\AppResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$checkout_shopping_cart_png_app_request = new \OpenAPI\Client\Model\CheckoutShoppingCartPNGAppRequest(); // \OpenAPI\Client\Model\CheckoutShoppingCartPNGAppRequest
+$checkout_shopping_cart_png_app_request = new \kruegge82\DPIM\Model\CheckoutShoppingCartPNGAppRequest(); // \kruegge82\DPIM\Model\CheckoutShoppingCartPNGAppRequest
 $validate = false; // bool | The response will contain the link to a thumbnail image of an Internet brand in PNG format, which the third-party application must integrate accordingly. The print format is not relevant at this point. The service is given a product code, optionally a motif and a layout format. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code or theme ID is invalid, the response to the caller will contain appropriate information.<br/> For the validate (preview) case the 'Authorization' header is not required.
 $finalize = false; // bool | This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required.
 
@@ -175,13 +175,13 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **checkout_shopping_cart_png_app_request** | [**\OpenAPI\Client\Model\CheckoutShoppingCartPNGAppRequest**](../Model/CheckoutShoppingCartPNGAppRequest.md)|  | |
+| **checkout_shopping_cart_png_app_request** | [**\kruegge82\DPIM\Model\CheckoutShoppingCartPNGAppRequest**](../Model/CheckoutShoppingCartPNGAppRequest.md)|  | |
 | **validate** | **bool**| The response will contain the link to a thumbnail image of an Internet brand in PNG format, which the third-party application must integrate accordingly. The print format is not relevant at this point. The service is given a product code, optionally a motif and a layout format. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code or theme ID is invalid, the response to the caller will contain appropriate information.&lt;br/&gt; For the validate (preview) case the &#39;Authorization&#39; header is not required. | [optional] [default to false] |
 | **finalize** | **bool**| This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. | [optional] [default to false] |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CheckoutShoppingCartAppResponse**](../Model/CheckoutShoppingCartAppResponse.md)
+[**\kruegge82\DPIM\Model\CheckoutShoppingCartAppResponse**](../Model/CheckoutShoppingCartAppResponse.md)
 
 ### Authorization
 
@@ -199,7 +199,7 @@ try {
 ## `initShoppingCartApp()`
 
 ```php
-initShoppingCartApp(): \OpenAPI\Client\Model\InitShoppingCartResponse
+initShoppingCartApp(): \kruegge82\DPIM\Model\InitShoppingCartResponse
 ```
 
 Initializes a shopping cart and returns the shopOrderId.
@@ -212,10 +212,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: BearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = kruegge82\DPIM\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AppResourceApi(
+$apiInstance = new kruegge82\DPIM\Api\AppResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -236,7 +236,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\OpenAPI\Client\Model\InitShoppingCartResponse**](../Model/InitShoppingCartResponse.md)
+[**\kruegge82\DPIM\Model\InitShoppingCartResponse**](../Model/InitShoppingCartResponse.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ This endpoint does not need any parameter.
 ## `retoureVouchersApp()`
 
 ```php
-retoureVouchersApp($retoure_vouchers_request): \OpenAPI\Client\Model\RetoureVouchersResponse
+retoureVouchersApp($retoure_vouchers_request): \kruegge82\DPIM\Model\RetoureVouchersResponse
 ```
 
 Retoure vouchers For App.
@@ -267,16 +267,16 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: BearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = kruegge82\DPIM\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AppResourceApi(
+$apiInstance = new kruegge82\DPIM\Api\AppResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$retoure_vouchers_request = new \OpenAPI\Client\Model\RetoureVouchersRequest(); // \OpenAPI\Client\Model\RetoureVouchersRequest
+$retoure_vouchers_request = new \kruegge82\DPIM\Model\RetoureVouchersRequest(); // \kruegge82\DPIM\Model\RetoureVouchersRequest
 
 try {
     $result = $apiInstance->retoureVouchersApp($retoure_vouchers_request);
@@ -290,11 +290,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **retoure_vouchers_request** | [**\OpenAPI\Client\Model\RetoureVouchersRequest**](../Model/RetoureVouchersRequest.md)|  | |
+| **retoure_vouchers_request** | [**\kruegge82\DPIM\Model\RetoureVouchersRequest**](../Model/RetoureVouchersRequest.md)|  | |
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RetoureVouchersResponse**](../Model/RetoureVouchersResponse.md)
+[**\kruegge82\DPIM\Model\RetoureVouchersResponse**](../Model/RetoureVouchersResponse.md)
 
 ### Authorization
 
@@ -312,7 +312,7 @@ try {
 ## `retrieveCatalogApp()`
 
 ```php
-retrieveCatalogApp($types): \OpenAPI\Client\Model\RetrieveCatalogResponse
+retrieveCatalogApp($types): \kruegge82\DPIM\Model\RetrieveCatalogResponse
 ```
 
 Retrieve catalogs.
@@ -325,10 +325,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: BearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = kruegge82\DPIM\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AppResourceApi(
+$apiInstance = new kruegge82\DPIM\Api\AppResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -352,7 +352,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RetrieveCatalogResponse**](../Model/RetrieveCatalogResponse.md)
+[**\kruegge82\DPIM\Model\RetrieveCatalogResponse**](../Model/RetrieveCatalogResponse.md)
 
 ### Authorization
 
@@ -370,7 +370,7 @@ try {
 ## `retrieveRetoureStateApp()`
 
 ```php
-retrieveRetoureStateApp($shop_retoure_id, $retoure_transaction_id, $start_date, $end_date): \OpenAPI\Client\Model\RetrieveRetoureStateResponse
+retrieveRetoureStateApp($shop_retoure_id, $retoure_transaction_id, $start_date, $end_date): \kruegge82\DPIM\Model\RetrieveRetoureStateResponse
 ```
 
 Retrieve retoure state for App.
@@ -383,10 +383,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: BearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = kruegge82\DPIM\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AppResourceApi(
+$apiInstance = new kruegge82\DPIM\Api\AppResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -416,7 +416,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\RetrieveRetoureStateResponse**](../Model/RetrieveRetoureStateResponse.md)
+[**\kruegge82\DPIM\Model\RetrieveRetoureStateResponse**](../Model/RetrieveRetoureStateResponse.md)
 
 ### Authorization
 
@@ -434,7 +434,7 @@ try {
 ## `retrieveShoppingCartApp()`
 
 ```php
-retrieveShoppingCartApp($shop_order_id): \OpenAPI\Client\Model\CheckoutShoppingCartAppResponse
+retrieveShoppingCartApp($shop_order_id): \kruegge82\DPIM\Model\CheckoutShoppingCartAppResponse
 ```
 
 Retrieves a shopping cart.
@@ -447,10 +447,10 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure Bearer authorization: BearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+$config = kruegge82\DPIM\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new OpenAPI\Client\Api\AppResourceApi(
+$apiInstance = new kruegge82\DPIM\Api\AppResourceApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -474,7 +474,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CheckoutShoppingCartAppResponse**](../Model/CheckoutShoppingCartAppResponse.md)
+[**\kruegge82\DPIM\Model\CheckoutShoppingCartAppResponse**](../Model/CheckoutShoppingCartAppResponse.md)
 
 ### Authorization
 
