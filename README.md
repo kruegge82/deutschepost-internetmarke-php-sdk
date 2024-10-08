@@ -74,7 +74,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new OpenAPI\Client\Api\UserResourceApi(
+$apiInstance = new kruegge82\DPIM\Api\UserResourceApi(
 // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
 // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -95,26 +95,26 @@ try {
 }
 
 // Configure Bearer authorization: BearerAuth
-$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setAccessToken($result->getAccessToken());
+$config = kruegge82\DPIM\Configuration::getDefaultConfiguration()->setAccessToken($result->getAccessToken());
 
-$apiInstance = new OpenAPI\Client\Api\AppResourceApi(
+$apiInstance = new kruegge82\DPIM\Api\AppResourceApi(
 // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
 // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 
-$AppShoppingCartPDFPosition=new \OpenAPI\Client\Model\AppShoppingCartPDFPosition();
+$AppShoppingCartPDFPosition=new \kruegge82\DPIM\Model\AppShoppingCartPDFPosition();
 $AppShoppingCartPDFPosition->setProductCode(10001);
 $AppShoppingCartPDFPosition->setVoucherLayout("ADDRESS_ZONE");
-$position = new \OpenAPI\Client\Model\VoucherPosition();
+$position = new \kruegge82\DPIM\Model\VoucherPosition();
 $position->setPage(1);
 $position->setLabelX(1);
 $position->setLabelY(1);
 $AppShoppingCartPDFPosition->setPosition($position);
 $AppShoppingCartPDFPosition->setPositionType("AppShoppingCartPDFPosition");
 
-$checkout_shopping_cart_pdf_app_request = new \OpenAPI\Client\Model\AppShoppingCartPDFRequest();
+$checkout_shopping_cart_pdf_app_request = new \kruegge82\DPIM\Model\AppShoppingCartPDFRequest();
 $checkout_shopping_cart_pdf_app_request->setType('AppShoppingCartPDFRequest');
 $checkout_shopping_cart_pdf_app_request->setPageFormatId(2);
 //$checkout_shopping_cart_pdf_app_request->setShopOrderId($result->getShopOrderId());
