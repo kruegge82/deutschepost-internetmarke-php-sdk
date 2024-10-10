@@ -681,7 +681,7 @@ class AppShoppingCartPDFRequest extends AppCheckoutPDFRequest
         if (is_null($positions)) {
             throw new \InvalidArgumentException('non-nullable positions cannot be null');
         }
-        $this->container['positions'][] = $positions;
+        $this->container['positions'] = $positions;
 
         return $this;
     }
