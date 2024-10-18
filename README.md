@@ -2,7 +2,7 @@
 
 Division: Post & Parcel Germany<br /> The INTERNETMARKE is the online-postage for mail products of Deutsche Post AG.
 
-For more information, please visit [https://www.deutschepost.de/de/i/internetmarke-porto-drucken/kundenservice/internetmark   e/kontakt.html](https://www.deutschepost.de/de/i/internetmarke-porto-drucken/kundenservice/internetmark   e/kontakt.html).
+For more information, please visit [https://www.deutschepost.de/de/i/internetmarke-porto-drucken/kundenservice/internetmark   e/kontakt.html](https://www.deutschepost.de/de/i/internetmarke-porto-drucken/kundenservice/internetmarke/kontakt.html).
 
 ## Installation & Usage
 
@@ -13,23 +13,9 @@ Should also work with PHP 8.0.
 
 ### Composer
 
-To install the bindings via [Composer](https://getcomposer.org/), add the following to `composer.json`:
+To install the bindings via [Composer](https://getcomposer.org/),
 
-```json
-{
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/kruegge82/deutschepost-internetmarke-php-sdk.git"
-    }
-  ],
-  "require": {
-    "kruegge82/deutschepost-internetmarke-php-sdk": "*@dev"
-  }
-}
-```
-
-Then run `composer install`
+run `composer require kruegge82/deutschepost-internetmarke-php-sdk`
 
 ### Manual Installation
 
