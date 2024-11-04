@@ -12,23 +12,9 @@ PHP 8.1 and later.
 
 ### Composer
 
-To install the bindings via [Composer](https://getcomposer.org/), add the following to `composer.json`:
+To install the bindings via [Composer](https://getcomposer.org/),
 
-```json
-{
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/kruegge82/deutschepost-internetmarke-php-sdk.git"
-    }
-  ],
-  "require": {
-    "kruegge82/deutschepost-internetmarke-php-sdk": "*@dev"
-  }
-}
-```
-
-Then run `composer install`
+run `composer require kruegge82/deutschepost-internetmarke-php-sdk`
 
 ### Manual Installation
 
