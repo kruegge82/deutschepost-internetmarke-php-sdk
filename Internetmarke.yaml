@@ -10,11 +10,7 @@ info:
   contact:
     name: Deutsche Post / DHL
     url: >-
-      https://www.deutschepost.de/de/i/internetmarke-porto-drucken/kundenservice/internetmark
-      
-      
-      
-      e/kontakt.html
+      https://www.deutschepost.de/de/i/internetmarke-porto-drucken/kundenservice/internetmarke/kontakt.html
   license:
     name: License
     url: https://www.deutschepost.com
@@ -963,10 +959,11 @@ components:
           example: 3rd Floor
         postalCode:
           maxLength: 10
-          minLength: 4
+          minLength: 3
+          pattern: ^[0-9A-Za-z]+([ -]?[0-9A-Za-z]+)*$
           type: string
-          description: The zip code.
-          example: '10115'
+          description: Mandatory for all countries that use a postal code system.
+          example: '53113'
         city:
           maxLength: 40
           minLength: 1
@@ -1046,14 +1043,17 @@ components:
       properties:
         labelX:
           type: integer
+          minimum: 1
           description: The x-position of the label.
           format: int32
         labelY:
           type: integer
+          minimum: 1
           description: The y-position of the label.
           format: int32
         page:
           type: integer
+          minimum: 1
           description: The target page in the printout.
           format: int32
       description: >-

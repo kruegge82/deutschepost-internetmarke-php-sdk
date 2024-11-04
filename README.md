@@ -2,14 +2,13 @@
 
 Division: Post & Parcel Germany<br /> The INTERNETMARKE is the online-postage for mail products of Deutsche Post AG.
 
-For more information, please visit [https://www.deutschepost.de/de/i/internetmarke-porto-drucken/kundenservice/internetmark   e/kontakt.html](https://www.deutschepost.de/de/i/internetmarke-porto-drucken/kundenservice/internetmark   e/kontakt.html).
+For more information, please visit [https://www.deutschepost.de/de/i/internetmarke-porto-drucken/kundenservice/internetmarke/kontakt.html](https://www.deutschepost.de/de/i/internetmarke-porto-drucken/kundenservice/internetmarke/kontakt.html).
 
 ## Installation & Usage
 
 ### Requirements
 
-PHP 7.4 and later.
-Should also work with PHP 8.0.
+PHP 8.1 and later.
 
 ### Composer
 
@@ -204,7 +203,6 @@ Class | Method | HTTP request | Description
 
 ## Authorization
 
-Authentication schemes defined for the API:
 ### BearerAuth
 
 - **Type**: Bearer authentication
