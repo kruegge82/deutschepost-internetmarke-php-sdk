@@ -700,7 +700,7 @@ class AppResourceApi
      * @throws ApiException on non-2xx response or if the response body is not in the expected format
      */
     public function checkoutShoppingCartPDFApp(
-        \kruegge82\DPIM\Model\CheckoutShoppingCartPDFAppRequest $checkout_shopping_cart_pdf_app_request,
+        $checkout_shopping_cart_pdf_app_request,
         ?bool $validate = false,
         ?bool $finalize = false,
         ?bool $directCheckout = false,
