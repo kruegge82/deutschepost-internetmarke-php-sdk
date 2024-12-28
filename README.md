@@ -103,7 +103,7 @@ $checkout_shopping_cart_pdf_app_request = new \kruegge82\DPIM\Model\AppShoppingC
 $checkout_shopping_cart_pdf_app_request->setType('AppShoppingCartPDFRequest');
 $checkout_shopping_cart_pdf_app_request->setPageFormatId(2);
 //$checkout_shopping_cart_pdf_app_request->setShopOrderId($result->getShopOrderId());
-$checkout_shopping_cart_pdf_app_request->setPositions($AppShoppingCartPDFPosition);
+$checkout_shopping_cart_pdf_app_request->setPositions([$AppShoppingCartPDFPosition]);
 $checkout_shopping_cart_pdf_app_request->setTotal(110);
 //$checkout_shopping_cart_pdf_app_request->setCreateManifest(false);
 //$checkout_shopping_cart_pdf_app_request->setCreateShippingList(false);
