@@ -2,16 +2,20 @@
     "name": "kruegge82/deutschepost-internetmarke-php-sdk",
     "description": "Division: Post & Parcel Germany<br /> The INTERNETMARKE is the online-postage for mail products of Deutsche Post AG.",
     "keywords": [
+        "openapitools",
+        "openapi-generator",
+        "openapi",
         "php",
         "sdk",
-        "Deutsche Post",
-        "api",
-        "Internetmarke"
+        "rest",
+        "api"
     ],
-    "license": "MIT",
+    "homepage": "https://openapi-generator.tech",
+    "license": "unlicense",
     "authors": [
         {
-            "name": "Jahn N."
+            "name": "OpenAPI-Generator contributors",
+            "homepage": "https://openapi-generator.tech"
         }
     ],
     "require": {

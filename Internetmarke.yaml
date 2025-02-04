@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  version: "1.25"
+  version: "1.26"
   title: Deutsche Post INTERNETMARKE API
   description: >-
     Division: Post & Parcel Germany<br />
@@ -323,7 +323,7 @@ paths:
           schema:
             type: boolean
             default: false
-        - name: finalize
+        - name: directCheckout
           in: query
           description: >-
             This request parameter enables the direct finalization of the
@@ -410,7 +410,7 @@ paths:
           schema:
             type: boolean
             default: false
-        - name: finalize
+        - name: directCheckout
           in: query
           description: >-
             This request parameter enables the direct finalization of the
@@ -1173,7 +1173,7 @@ components:
               type: string
               description: >-
                 The order number in the shop. All characters are allowed except
-                < and &. It is optional in case of query parameter finalize is
+                < and &. It is optional in case of query parameter directCheckout is
                 true. In all other cases it is mandatory required.
             total:
               type: integer
@@ -1321,7 +1321,7 @@ components:
               type: string
               description: >-
                 The order number in the shop. All characters are allowed except
-                < and &. It is optional in case of query parameter finalize is
+                < and &. It is optional in case of query parameter directCheckout is
                 true. In all other cases it is mandatory required.
             total:
               type: integer

@@ -12,9 +12,23 @@ PHP 8.1 and later.
 
 ### Composer
 
-To install the bindings via [Composer](https://getcomposer.org/),
+To install the bindings via [Composer](https://getcomposer.org/), add the following to `composer.json`:
 
-run `composer require kruegge82/deutschepost-internetmarke-php-sdk`
+```json
+{
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+    }
+  ],
+  "require": {
+    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+  }
+}
+```
+
+Then run `composer install`
 
 ### Manual Installation
 
@@ -22,7 +36,7 @@ Download the files and include `autoload.php`:
 
 ```php
 <?php
-require_once('/path/to/vendor/autoload.php');
+require_once('/path/to/OpenAPIClient-php/vendor/autoload.php');
 ```
 
 ## Getting Started
@@ -50,77 +64,6 @@ try {
 }
 
 ```
-
-## Full DirectCheckout Example
-
-Please follow the [installation procedure](#installation--usage) and then run the following:
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-$apiInstance = new kruegge82\DPIM\Api\UserResourceApi(
-// If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-// This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
-);
-$grant_type = 'client_credentials'; // string | OAuth2 standard content, must be set to 'client_credentials'
-$username = 'franz.klammer@dhldp-test.de'; // string | Internetmarke user name (e.g. 'franz.klammer').
-$password = 'abfahrt123#'; // string | Internetmarke password (e.g. 'abfahrt123#')
-$client_id = 'XjSnyVWgQp1ShIQ5HQ6Vq5PIYLN2jGNS'; // string | API client_id obtained from developer portal (e.g. 'XjSnyVWgQp1ShIQ5HQ6Vq5PIYLN2jGNS')
-$client_secret = 'TICgJWGRysH7mA57'; // string | API client_secret obtained from developer portal (e.g. 'TICgJWGRysH7mA57')
-$for_payment = false; // bool | Flag to indicate the authorization for payment use case.
-
-
-try {
-    $result = $apiInstance->authorization($grant_type, $username, $password, $client_id, $client_secret, $for_payment);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling UserResourceApi->authorization: ', $e->getMessage(), PHP_EOL;
-}
-
-// Configure Bearer authorization: BearerAuth
-$config = kruegge82\DPIM\Configuration::getDefaultConfiguration()->setAccessToken($result->getAccessToken());
-
-$apiInstance = new kruegge82\DPIM\Api\AppResourceApi(
-// If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-// This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-
-$AppShoppingCartPDFPosition=new \kruegge82\DPIM\Model\AppShoppingCartPDFPosition();
-$AppShoppingCartPDFPosition->setProductCode(10001);
-$AppShoppingCartPDFPosition->setVoucherLayout("ADDRESS_ZONE");
-$position = new \kruegge82\DPIM\Model\VoucherPosition();
-$position->setPage(1);
-$position->setLabelX(1);
-$position->setLabelY(1);
-$AppShoppingCartPDFPosition->setPosition($position);
-$AppShoppingCartPDFPosition->setPositionType("AppShoppingCartPDFPosition");
-
-$checkout_shopping_cart_pdf_app_request = new \kruegge82\DPIM\Model\AppShoppingCartPDFRequest();
-$checkout_shopping_cart_pdf_app_request->setType('AppShoppingCartPDFRequest');
-$checkout_shopping_cart_pdf_app_request->setPageFormatId(2);
-//$checkout_shopping_cart_pdf_app_request->setShopOrderId($result->getShopOrderId());
-$checkout_shopping_cart_pdf_app_request->setPositions([$AppShoppingCartPDFPosition]);
-$checkout_shopping_cart_pdf_app_request->setTotal(110);
-//$checkout_shopping_cart_pdf_app_request->setCreateManifest(false);
-//$checkout_shopping_cart_pdf_app_request->setCreateShippingList(false);
-$checkout_shopping_cart_pdf_app_request->setDpi('DPI203');
-$validate = false; // bool | This request parameter enables the validate (preview) case.<br/>The response will contain the link to a preview image of an internet stamp in PDF format. A product code, a layout format and optionally a motif are transferred to the service. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code, print format, or theme ID is invalid, the response to the caller will contain appropriate information.   <br/><br/> For the validate (preview) case the 'Authorization' header is not required and the request body has to be of the specified type (See `#/components/schemas/AppShoppingCartPreviewPDFRequest`).
-$finalize = false; // bool | This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required.
-$directCheckout = true; // bool | This request parameter enables the direct checkout of the shopping cart and an extra finalization request is not required.
-
-try {
-    $result = $apiInstance->checkoutShoppingCartPDFApp($checkout_shopping_cart_pdf_app_request, $validate, $finalize, $directCheckout);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling AppResourceApi->checkoutShoppingCartPDFApp: ', $e->getMessage(), PHP_EOL;
-}
-
-```
-
 
 ## API Endpoints
 
@@ -192,3 +135,24 @@ Class | Method | HTTP request | Description
 ### BearerAuth
 
 - **Type**: Bearer authentication
+
+## Tests
+
+To run the tests, use:
+
+```bash
+composer install
+vendor/bin/phpunit
+```
+
+## Author
+
+
+
+## About this package
+
+This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
+
+- API version: `1.26`
+    - Generator version: `7.12.0-SNAPSHOT`
+- Build package: `org.openapitools.codegen.languages.PhpNextgenClientCodegen`
