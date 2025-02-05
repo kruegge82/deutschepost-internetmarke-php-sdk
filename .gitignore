@@ -5,7 +5,8 @@ composer.phar
 
 # Commit your application's lock file https://getcomposer.org/doc/01-basic-usage.md#commit-your-composer-lock-file-to-version-control
 # You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
-# composer.lock
+# makes sense since it's a library(client SDK) and not a project
+composer.lock
 
 # php-cs-fixer cache
 .php_cs.cache
@@ -13,18 +14,6 @@ composer.phar
 
 # PHPUnit cache
 .phpunit.result.cache
-/.idea/.gitignore
-/.openapi-generator-ignore
-/.php-cs-fixer.dist.php
-/.phplint.yml
-/.travis.yml
-/git_push.sh
-/generate.sh
-/.idea/deployment.xml
-/.openapi-generator/FILES
-/.idea/modules.xml
-/.idea/php.xml
-/.idea/phpunit.xml
-/test2.php
-/.idea/vcs.xml
-/.openapi-generator/VERSION
+
+# PHPLint cache
+build/phplint.cache
