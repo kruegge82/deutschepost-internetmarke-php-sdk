@@ -11,6 +11,6 @@ Name | Type | Description | Notes
 **expires_in** | **int** | remaining token validity in seconds | [optional]
 **issued_at** | **string** | Time when token was issued | [optional]
 **external_customer_id** | **string** | Matches the user requesting the token, used internally | [optional]
-**autenticated_user** | **string** | user requesting the token | [optional]
+**authenticated_user** | **string** | user requesting the token | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

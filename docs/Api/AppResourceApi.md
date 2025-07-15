@@ -75,7 +75,7 @@ try {
 ## `checkoutShoppingCartPDFApp()`
 
 ```php
-checkoutShoppingCartPDFApp($checkout_shopping_cart_pdf_app_request, $validate, $direct_checkout): \kruegge82\DPIM\Model\CheckoutShoppingCartAppResponse
+checkoutShoppingCartPDFApp($checkout_shopping_cart_pdf_app_request, $validate, $finalize): \kruegge82\DPIM\Model\CheckoutShoppingCartAppResponse
 ```
 
 Checkouts ot the PDF shopping cart.
@@ -99,10 +99,10 @@ $apiInstance = new kruegge82\DPIM\Api\AppResourceApi(
 );
 $checkout_shopping_cart_pdf_app_request = new \kruegge82\DPIM\Model\CheckoutShoppingCartPDFAppRequest(); // \kruegge82\DPIM\Model\CheckoutShoppingCartPDFAppRequest
 $validate = false; // bool | This request parameter enables the validate (preview) case.<br/>The response will contain the link to a preview image of an internet stamp in PDF format. A product code, a layout format and optionally a motif are transferred to the service. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code, print format, or theme ID is invalid, the response to the caller will contain appropriate information.   <br/><br/> For the validate (preview) case the 'Authorization' header is not required and the request body has to be of the specified type (See `#/components/schemas/AppShoppingCartPreviewPDFRequest`).
-$direct_checkout = false; // bool | This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required.
+$finalize = false; // bool | This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required.
 
 try {
-    $result = $apiInstance->checkoutShoppingCartPDFApp($checkout_shopping_cart_pdf_app_request, $validate, $direct_checkout);
+    $result = $apiInstance->checkoutShoppingCartPDFApp($checkout_shopping_cart_pdf_app_request, $validate, $finalize);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AppResourceApi->checkoutShoppingCartPDFApp: ', $e->getMessage(), PHP_EOL;
@@ -115,7 +115,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **checkout_shopping_cart_pdf_app_request** | [**\kruegge82\DPIM\Model\CheckoutShoppingCartPDFAppRequest**](../Model/CheckoutShoppingCartPDFAppRequest.md)|  | |
 | **validate** | **bool**| This request parameter enables the validate (preview) case.&lt;br/&gt;The response will contain the link to a preview image of an internet stamp in PDF format. A product code, a layout format and optionally a motif are transferred to the service. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code, print format, or theme ID is invalid, the response to the caller will contain appropriate information.   &lt;br/&gt;&lt;br/&gt; For the validate (preview) case the &#39;Authorization&#39; header is not required and the request body has to be of the specified type (See &#x60;#/components/schemas/AppShoppingCartPreviewPDFRequest&#x60;). | [optional] [default to false] |
-| **direct_checkout** | **bool**| This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. | [optional] [default to false] |
+| **finalize** | **bool**| This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. | [optional] [default to false] |
 
 ### Return type
 
@@ -137,7 +137,7 @@ try {
 ## `checkoutShoppingCartPNGApp()`
 
 ```php
-checkoutShoppingCartPNGApp($checkout_shopping_cart_png_app_request, $validate, $direct_checkout): \kruegge82\DPIM\Model\CheckoutShoppingCartAppResponse
+checkoutShoppingCartPNGApp($checkout_shopping_cart_png_app_request, $validate, $finalize): \kruegge82\DPIM\Model\CheckoutShoppingCartAppResponse
 ```
 
 Checkouts ot the PNG shopping cart.
@@ -161,10 +161,10 @@ $apiInstance = new kruegge82\DPIM\Api\AppResourceApi(
 );
 $checkout_shopping_cart_png_app_request = new \kruegge82\DPIM\Model\CheckoutShoppingCartPNGAppRequest(); // \kruegge82\DPIM\Model\CheckoutShoppingCartPNGAppRequest
 $validate = false; // bool | The response will contain the link to a thumbnail image of an Internet brand in PNG format, which the third-party application must integrate accordingly. The print format is not relevant at this point. The service is given a product code, optionally a motif and a layout format. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code or theme ID is invalid, the response to the caller will contain appropriate information.<br/> For the validate (preview) case the 'Authorization' header is not required.
-$direct_checkout = false; // bool | This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required.
+$finalize = false; // bool | This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required.
 
 try {
-    $result = $apiInstance->checkoutShoppingCartPNGApp($checkout_shopping_cart_png_app_request, $validate, $direct_checkout);
+    $result = $apiInstance->checkoutShoppingCartPNGApp($checkout_shopping_cart_png_app_request, $validate, $finalize);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AppResourceApi->checkoutShoppingCartPNGApp: ', $e->getMessage(), PHP_EOL;
@@ -177,7 +177,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **checkout_shopping_cart_png_app_request** | [**\kruegge82\DPIM\Model\CheckoutShoppingCartPNGAppRequest**](../Model/CheckoutShoppingCartPNGAppRequest.md)|  | |
 | **validate** | **bool**| The response will contain the link to a thumbnail image of an Internet brand in PNG format, which the third-party application must integrate accordingly. The print format is not relevant at this point. The service is given a product code, optionally a motif and a layout format. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code or theme ID is invalid, the response to the caller will contain appropriate information.&lt;br/&gt; For the validate (preview) case the &#39;Authorization&#39; header is not required. | [optional] [default to false] |
-| **direct_checkout** | **bool**| This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. | [optional] [default to false] |
+| **finalize** | **bool**| This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. | [optional] [default to false] |
 
 ### Return type
 

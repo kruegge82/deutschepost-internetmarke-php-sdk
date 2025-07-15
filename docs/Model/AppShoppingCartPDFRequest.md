@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **string** | set AppShoppingCartPDFRequest if validate&#x3D;false, AppShoppingCartPreviewPDFRequest if validate&#x3D;true | [default to 'AppShoppingCartPDFRequest']
-**shop_order_id** | **string** | The order number in the shop. All characters are allowed except &lt; and &amp;. It is optional in case of query parameter directCheckout is true. In all other cases it is mandatory required. | [optional]
+**shop_order_id** | **string** | The order number in the shop. All characters are allowed except &lt; and &amp;. It is optional in case of query parameter finalize is true. In all other cases it is mandatory required. | [optional]
 **total** | **int** | Total value of the shopping cart in euro cents. | [optional]
 **create_manifest** | **bool** | The flag indicating whether a posting receipt should be created. | [optional]
 **create_shipping_list** | **string** | Identifier of which type of shipping list is to be created is to be created: 0: No shipping list 1: Shipping list without addresses / delivery receipt only 2: Shipping list with addresses | [optional]
