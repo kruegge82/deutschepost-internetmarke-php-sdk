@@ -513,16 +513,16 @@ class AppResourceApi
      *
      * @param  \kruegge82\DPIM\Model\CheckoutShoppingCartPDFAppRequest $checkout_shopping_cart_pdf_app_request checkout_shopping_cart_pdf_app_request (required)
      * @param  bool|null $validate This request parameter enables the validate (preview) case.&lt;br/&gt;The response will contain the link to a preview image of an internet stamp in PDF format. A product code, a layout format and optionally a motif are transferred to the service. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code, print format, or theme ID is invalid, the response to the caller will contain appropriate information.   &lt;br/&gt;&lt;br/&gt; For the validate (preview) case the &#39;Authorization&#39; header is not required and the request body has to be of the specified type (See &#x60;#/components/schemas/AppShoppingCartPreviewPDFRequest&#x60;). (optional, default to false)
-     * @param  bool|null $finalize This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
+     * @param  bool|null $direct_checkout This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkoutShoppingCartPDFApp'] to see the possible values for this operation
      *
      * @throws \kruegge82\DPIM\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \kruegge82\DPIM\Model\CheckoutShoppingCartAppResponse|\kruegge82\DPIM\Model\RequestStatus|\kruegge82\DPIM\Model\Error401Response|\kruegge82\DPIM\Model\RequestStatus|\kruegge82\DPIM\Model\Error429Response|\kruegge82\DPIM\Model\RequestStatus
      */
-    public function checkoutShoppingCartPDFApp($checkout_shopping_cart_pdf_app_request, $validate = false, $finalize = false, string $contentType = self::contentTypes['checkoutShoppingCartPDFApp'][0])
+    public function checkoutShoppingCartPDFApp($checkout_shopping_cart_pdf_app_request, $validate = false, $direct_checkout = false, string $contentType = self::contentTypes['checkoutShoppingCartPDFApp'][0])
     {
-        list($response) = $this->checkoutShoppingCartPDFAppWithHttpInfo($checkout_shopping_cart_pdf_app_request, $validate, $finalize, $contentType);
+        list($response) = $this->checkoutShoppingCartPDFAppWithHttpInfo($checkout_shopping_cart_pdf_app_request, $validate, $direct_checkout, $contentType);
         return $response;
     }
 
@@ -533,16 +533,16 @@ class AppResourceApi
      *
      * @param  \kruegge82\DPIM\Model\CheckoutShoppingCartPDFAppRequest $checkout_shopping_cart_pdf_app_request (required)
      * @param  bool|null $validate This request parameter enables the validate (preview) case.&lt;br/&gt;The response will contain the link to a preview image of an internet stamp in PDF format. A product code, a layout format and optionally a motif are transferred to the service. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code, print format, or theme ID is invalid, the response to the caller will contain appropriate information.   &lt;br/&gt;&lt;br/&gt; For the validate (preview) case the &#39;Authorization&#39; header is not required and the request body has to be of the specified type (See &#x60;#/components/schemas/AppShoppingCartPreviewPDFRequest&#x60;). (optional, default to false)
-     * @param  bool|null $finalize This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
+     * @param  bool|null $direct_checkout This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkoutShoppingCartPDFApp'] to see the possible values for this operation
      *
      * @throws \kruegge82\DPIM\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \kruegge82\DPIM\Model\CheckoutShoppingCartAppResponse|\kruegge82\DPIM\Model\RequestStatus|\kruegge82\DPIM\Model\Error401Response|\kruegge82\DPIM\Model\RequestStatus|\kruegge82\DPIM\Model\Error429Response|\kruegge82\DPIM\Model\RequestStatus, HTTP status code, HTTP response headers (array of strings)
      */
-    public function checkoutShoppingCartPDFAppWithHttpInfo($checkout_shopping_cart_pdf_app_request, $validate = false, $finalize = false, string $contentType = self::contentTypes['checkoutShoppingCartPDFApp'][0])
+    public function checkoutShoppingCartPDFAppWithHttpInfo($checkout_shopping_cart_pdf_app_request, $validate = false, $direct_checkout = false, string $contentType = self::contentTypes['checkoutShoppingCartPDFApp'][0])
     {
-        $request = $this->checkoutShoppingCartPDFAppRequest($checkout_shopping_cart_pdf_app_request, $validate, $finalize, $contentType);
+        $request = $this->checkoutShoppingCartPDFAppRequest($checkout_shopping_cart_pdf_app_request, $validate, $direct_checkout, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -690,15 +690,15 @@ class AppResourceApi
      *
      * @param  \kruegge82\DPIM\Model\CheckoutShoppingCartPDFAppRequest $checkout_shopping_cart_pdf_app_request (required)
      * @param  bool|null $validate This request parameter enables the validate (preview) case.&lt;br/&gt;The response will contain the link to a preview image of an internet stamp in PDF format. A product code, a layout format and optionally a motif are transferred to the service. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code, print format, or theme ID is invalid, the response to the caller will contain appropriate information.   &lt;br/&gt;&lt;br/&gt; For the validate (preview) case the &#39;Authorization&#39; header is not required and the request body has to be of the specified type (See &#x60;#/components/schemas/AppShoppingCartPreviewPDFRequest&#x60;). (optional, default to false)
-     * @param  bool|null $finalize This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
+     * @param  bool|null $direct_checkout This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkoutShoppingCartPDFApp'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function checkoutShoppingCartPDFAppAsync($checkout_shopping_cart_pdf_app_request, $validate = false, $finalize = false, string $contentType = self::contentTypes['checkoutShoppingCartPDFApp'][0])
+    public function checkoutShoppingCartPDFAppAsync($checkout_shopping_cart_pdf_app_request, $validate = false, $direct_checkout = false, string $contentType = self::contentTypes['checkoutShoppingCartPDFApp'][0])
     {
-        return $this->checkoutShoppingCartPDFAppAsyncWithHttpInfo($checkout_shopping_cart_pdf_app_request, $validate, $finalize, $contentType)
+        return $this->checkoutShoppingCartPDFAppAsyncWithHttpInfo($checkout_shopping_cart_pdf_app_request, $validate, $direct_checkout, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -713,16 +713,16 @@ class AppResourceApi
      *
      * @param  \kruegge82\DPIM\Model\CheckoutShoppingCartPDFAppRequest $checkout_shopping_cart_pdf_app_request (required)
      * @param  bool|null $validate This request parameter enables the validate (preview) case.&lt;br/&gt;The response will contain the link to a preview image of an internet stamp in PDF format. A product code, a layout format and optionally a motif are transferred to the service. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code, print format, or theme ID is invalid, the response to the caller will contain appropriate information.   &lt;br/&gt;&lt;br/&gt; For the validate (preview) case the &#39;Authorization&#39; header is not required and the request body has to be of the specified type (See &#x60;#/components/schemas/AppShoppingCartPreviewPDFRequest&#x60;). (optional, default to false)
-     * @param  bool|null $finalize This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
+     * @param  bool|null $direct_checkout This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkoutShoppingCartPDFApp'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function checkoutShoppingCartPDFAppAsyncWithHttpInfo($checkout_shopping_cart_pdf_app_request, $validate = false, $finalize = false, string $contentType = self::contentTypes['checkoutShoppingCartPDFApp'][0])
+    public function checkoutShoppingCartPDFAppAsyncWithHttpInfo($checkout_shopping_cart_pdf_app_request, $validate = false, $direct_checkout = false, string $contentType = self::contentTypes['checkoutShoppingCartPDFApp'][0])
     {
         $returnType = '\kruegge82\DPIM\Model\CheckoutShoppingCartAppResponse';
-        $request = $this->checkoutShoppingCartPDFAppRequest($checkout_shopping_cart_pdf_app_request, $validate, $finalize, $contentType);
+        $request = $this->checkoutShoppingCartPDFAppRequest($checkout_shopping_cart_pdf_app_request, $validate, $direct_checkout, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -765,13 +765,13 @@ class AppResourceApi
      *
      * @param  \kruegge82\DPIM\Model\CheckoutShoppingCartPDFAppRequest $checkout_shopping_cart_pdf_app_request (required)
      * @param  bool|null $validate This request parameter enables the validate (preview) case.&lt;br/&gt;The response will contain the link to a preview image of an internet stamp in PDF format. A product code, a layout format and optionally a motif are transferred to the service. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code, print format, or theme ID is invalid, the response to the caller will contain appropriate information.   &lt;br/&gt;&lt;br/&gt; For the validate (preview) case the &#39;Authorization&#39; header is not required and the request body has to be of the specified type (See &#x60;#/components/schemas/AppShoppingCartPreviewPDFRequest&#x60;). (optional, default to false)
-     * @param  bool|null $finalize This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
+     * @param  bool|null $direct_checkout This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkoutShoppingCartPDFApp'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function checkoutShoppingCartPDFAppRequest($checkout_shopping_cart_pdf_app_request, $validate = false, $finalize = false, string $contentType = self::contentTypes['checkoutShoppingCartPDFApp'][0])
+    public function checkoutShoppingCartPDFAppRequest($checkout_shopping_cart_pdf_app_request, $validate = false, $direct_checkout = false, string $contentType = self::contentTypes['checkoutShoppingCartPDFApp'][0])
     {
 
         // verify the required parameter 'checkout_shopping_cart_pdf_app_request' is set
@@ -802,8 +802,8 @@ class AppResourceApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $finalize,
-            'finalize', // param base name
+            $direct_checkout,
+            'directCheckout', // param base name
             'boolean', // openApiType
             'form', // style
             true, // explode
@@ -884,16 +884,16 @@ class AppResourceApi
      *
      * @param  \kruegge82\DPIM\Model\CheckoutShoppingCartPNGAppRequest $checkout_shopping_cart_png_app_request checkout_shopping_cart_png_app_request (required)
      * @param  bool|null $validate The response will contain the link to a thumbnail image of an Internet brand in PNG format, which the third-party application must integrate accordingly. The print format is not relevant at this point. The service is given a product code, optionally a motif and a layout format. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code or theme ID is invalid, the response to the caller will contain appropriate information.&lt;br/&gt; For the validate (preview) case the &#39;Authorization&#39; header is not required. (optional, default to false)
-     * @param  bool|null $finalize This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
+     * @param  bool|null $direct_checkout This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkoutShoppingCartPNGApp'] to see the possible values for this operation
      *
      * @throws \kruegge82\DPIM\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \kruegge82\DPIM\Model\CheckoutShoppingCartAppResponse|\kruegge82\DPIM\Model\RequestStatus|\kruegge82\DPIM\Model\Error401Response|\kruegge82\DPIM\Model\RequestStatus|\kruegge82\DPIM\Model\Error429Response|\kruegge82\DPIM\Model\RequestStatus
      */
-    public function checkoutShoppingCartPNGApp($checkout_shopping_cart_png_app_request, $validate = false, $finalize = false, string $contentType = self::contentTypes['checkoutShoppingCartPNGApp'][0])
+    public function checkoutShoppingCartPNGApp($checkout_shopping_cart_png_app_request, $validate = false, $direct_checkout = false, string $contentType = self::contentTypes['checkoutShoppingCartPNGApp'][0])
     {
-        list($response) = $this->checkoutShoppingCartPNGAppWithHttpInfo($checkout_shopping_cart_png_app_request, $validate, $finalize, $contentType);
+        list($response) = $this->checkoutShoppingCartPNGAppWithHttpInfo($checkout_shopping_cart_png_app_request, $validate, $direct_checkout, $contentType);
         return $response;
     }
 
@@ -904,16 +904,16 @@ class AppResourceApi
      *
      * @param  \kruegge82\DPIM\Model\CheckoutShoppingCartPNGAppRequest $checkout_shopping_cart_png_app_request (required)
      * @param  bool|null $validate The response will contain the link to a thumbnail image of an Internet brand in PNG format, which the third-party application must integrate accordingly. The print format is not relevant at this point. The service is given a product code, optionally a motif and a layout format. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code or theme ID is invalid, the response to the caller will contain appropriate information.&lt;br/&gt; For the validate (preview) case the &#39;Authorization&#39; header is not required. (optional, default to false)
-     * @param  bool|null $finalize This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
+     * @param  bool|null $direct_checkout This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkoutShoppingCartPNGApp'] to see the possible values for this operation
      *
      * @throws \kruegge82\DPIM\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \kruegge82\DPIM\Model\CheckoutShoppingCartAppResponse|\kruegge82\DPIM\Model\RequestStatus|\kruegge82\DPIM\Model\Error401Response|\kruegge82\DPIM\Model\RequestStatus|\kruegge82\DPIM\Model\Error429Response|\kruegge82\DPIM\Model\RequestStatus, HTTP status code, HTTP response headers (array of strings)
      */
-    public function checkoutShoppingCartPNGAppWithHttpInfo($checkout_shopping_cart_png_app_request, $validate = false, $finalize = false, string $contentType = self::contentTypes['checkoutShoppingCartPNGApp'][0])
+    public function checkoutShoppingCartPNGAppWithHttpInfo($checkout_shopping_cart_png_app_request, $validate = false, $direct_checkout = false, string $contentType = self::contentTypes['checkoutShoppingCartPNGApp'][0])
     {
-        $request = $this->checkoutShoppingCartPNGAppRequest($checkout_shopping_cart_png_app_request, $validate, $finalize, $contentType);
+        $request = $this->checkoutShoppingCartPNGAppRequest($checkout_shopping_cart_png_app_request, $validate, $direct_checkout, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1061,15 +1061,15 @@ class AppResourceApi
      *
      * @param  \kruegge82\DPIM\Model\CheckoutShoppingCartPNGAppRequest $checkout_shopping_cart_png_app_request (required)
      * @param  bool|null $validate The response will contain the link to a thumbnail image of an Internet brand in PNG format, which the third-party application must integrate accordingly. The print format is not relevant at this point. The service is given a product code, optionally a motif and a layout format. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code or theme ID is invalid, the response to the caller will contain appropriate information.&lt;br/&gt; For the validate (preview) case the &#39;Authorization&#39; header is not required. (optional, default to false)
-     * @param  bool|null $finalize This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
+     * @param  bool|null $direct_checkout This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkoutShoppingCartPNGApp'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function checkoutShoppingCartPNGAppAsync($checkout_shopping_cart_png_app_request, $validate = false, $finalize = false, string $contentType = self::contentTypes['checkoutShoppingCartPNGApp'][0])
+    public function checkoutShoppingCartPNGAppAsync($checkout_shopping_cart_png_app_request, $validate = false, $direct_checkout = false, string $contentType = self::contentTypes['checkoutShoppingCartPNGApp'][0])
     {
-        return $this->checkoutShoppingCartPNGAppAsyncWithHttpInfo($checkout_shopping_cart_png_app_request, $validate, $finalize, $contentType)
+        return $this->checkoutShoppingCartPNGAppAsyncWithHttpInfo($checkout_shopping_cart_png_app_request, $validate, $direct_checkout, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1084,16 +1084,16 @@ class AppResourceApi
      *
      * @param  \kruegge82\DPIM\Model\CheckoutShoppingCartPNGAppRequest $checkout_shopping_cart_png_app_request (required)
      * @param  bool|null $validate The response will contain the link to a thumbnail image of an Internet brand in PNG format, which the third-party application must integrate accordingly. The print format is not relevant at this point. The service is given a product code, optionally a motif and a layout format. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code or theme ID is invalid, the response to the caller will contain appropriate information.&lt;br/&gt; For the validate (preview) case the &#39;Authorization&#39; header is not required. (optional, default to false)
-     * @param  bool|null $finalize This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
+     * @param  bool|null $direct_checkout This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkoutShoppingCartPNGApp'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function checkoutShoppingCartPNGAppAsyncWithHttpInfo($checkout_shopping_cart_png_app_request, $validate = false, $finalize = false, string $contentType = self::contentTypes['checkoutShoppingCartPNGApp'][0])
+    public function checkoutShoppingCartPNGAppAsyncWithHttpInfo($checkout_shopping_cart_png_app_request, $validate = false, $direct_checkout = false, string $contentType = self::contentTypes['checkoutShoppingCartPNGApp'][0])
     {
         $returnType = '\kruegge82\DPIM\Model\CheckoutShoppingCartAppResponse';
-        $request = $this->checkoutShoppingCartPNGAppRequest($checkout_shopping_cart_png_app_request, $validate, $finalize, $contentType);
+        $request = $this->checkoutShoppingCartPNGAppRequest($checkout_shopping_cart_png_app_request, $validate, $direct_checkout, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1136,13 +1136,13 @@ class AppResourceApi
      *
      * @param  \kruegge82\DPIM\Model\CheckoutShoppingCartPNGAppRequest $checkout_shopping_cart_png_app_request (required)
      * @param  bool|null $validate The response will contain the link to a thumbnail image of an Internet brand in PNG format, which the third-party application must integrate accordingly. The print format is not relevant at this point. The service is given a product code, optionally a motif and a layout format. This information is encoded in the link and evaluated by INTERNETMARKE when the preview image is rendered. If the product code or theme ID is invalid, the response to the caller will contain appropriate information.&lt;br/&gt; For the validate (preview) case the &#39;Authorization&#39; header is not required. (optional, default to false)
-     * @param  bool|null $finalize This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
+     * @param  bool|null $direct_checkout This request parameter enables the direct finalization of the shopping cart and an extra finalization request is not required. (optional, default to false)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['checkoutShoppingCartPNGApp'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function checkoutShoppingCartPNGAppRequest($checkout_shopping_cart_png_app_request, $validate = false, $finalize = false, string $contentType = self::contentTypes['checkoutShoppingCartPNGApp'][0])
+    public function checkoutShoppingCartPNGAppRequest($checkout_shopping_cart_png_app_request, $validate = false, $direct_checkout = false, string $contentType = self::contentTypes['checkoutShoppingCartPNGApp'][0])
     {
 
         // verify the required parameter 'checkout_shopping_cart_png_app_request' is set
@@ -1173,8 +1173,8 @@ class AppResourceApi
         ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $finalize,
-            'finalize', // param base name
+            $direct_checkout,
+            'directCheckout', // param base name
             'boolean', // openApiType
             'form', // style
             true, // explode

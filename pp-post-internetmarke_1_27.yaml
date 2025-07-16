@@ -323,7 +323,7 @@ paths:
           schema:
             type: boolean
             default: false
-        - name: finalize
+        - name: directCheckout
           in: query
           description: >-
             This request parameter enables the direct finalization of the
@@ -410,7 +410,7 @@ paths:
           schema:
             type: boolean
             default: false
-        - name: finalize
+        - name: directCheckout
           in: query
           description: >-
             This request parameter enables the direct finalization of the
