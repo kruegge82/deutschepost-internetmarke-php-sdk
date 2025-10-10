@@ -555,7 +555,7 @@ class Address implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets postal_code
      *
-     * @param string $postal_code The zip code.
+     * @param string $postal_code Mandatory for all countries that use a postal code system.
      *
      * @return self
      */

@@ -60,7 +60,7 @@ paths:
                       version:
                         type: string
                         description: "Sandbox version is >= Prod version"
-                        pattern: '^v\d{1,2}\.\d{1,2}(\.\d{1,5})$'
+                        pattern: '^v\d{1,2}.\d{1,2}[.\d{1,5}]$'
                         example: 'v1.1.4'
                       rev: 
                         type: string
@@ -962,8 +962,8 @@ components:
           minLength: 3
           pattern: ^[0-9A-Za-z]+([ -]?[0-9A-Za-z]+)*$
           type: string
-          description: The zip code.
-          example: '10115'
+          description: Mandatory for all countries that use a postal code system.
+          example: '53113'
         city:
           maxLength: 40
           minLength: 1

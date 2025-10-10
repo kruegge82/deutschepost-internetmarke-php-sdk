@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **additional_name** | **string** | The additional name information (i. e. company name) | [optional]
 **address_line1** | **string** | This is the first line of the address. Usually street name and house number. |
 **address_line2** | **string** | Line 2 of the street address. Most of the time this is not needed and not printed to most labels. | [optional]
-**postal_code** | **string** | The zip code. |
+**postal_code** | **string** | Mandatory for all countries that use a postal code system. |
 **city** | **string** | The name of the city. |
 **country** | **string** | The iso 3 code of the country. |
 
