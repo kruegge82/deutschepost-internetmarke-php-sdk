@@ -958,8 +958,9 @@ components:
             and not printed to most labels.
           example: 3rd Floor
         postalCode:
-          maxLength: 5
-          minLength: 5
+          maxLength: 10
+          minLength: 3
+          pattern: ^[0-9A-Za-z]+([ -]?[0-9A-Za-z]+)*$
           type: string
           description: The zip code.
           example: '10115'
